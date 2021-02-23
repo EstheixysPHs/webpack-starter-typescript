@@ -33,8 +33,25 @@ const usuariosRef = db.collection('usuarios');
 //    });
 
 // delete from usuatios where id ='xx'
-usuariosRef
-       .doc('ouCtT4r6y8aE6N3GCLtc')
-       .delete()
-       .then(()=> console.log ('Borrado') )
-       .catch(e => console.log('error', e));
+//usuariosRef
+//       .doc('ouCtT4r6y8aE6N3GCLtc')
+//       .delete()
+//       .then(()=> console.log ('Borrado') )
+//       .catch(e => console.log('error', e));
+
+//select * from usuarios;
+//usuariosRef
+//      .onSnapshot(snap =>{
+//
+//            const usuarios: any[] =[];
+//
+//        snap.forEach(snaphijo =>{
+//            usuarios.push({
+//                id: snaphijo.id,
+//                ...snaphijo.data()
+//            })
+//            
+//        });
+//
+//        console.log(usuarios)
+//      })
