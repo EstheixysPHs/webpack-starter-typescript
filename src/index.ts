@@ -48,4 +48,35 @@ const usuariosRef = db.collection('usuarios');
 //
 //      })
 
-usuariosRef.get().then( retornaDocumentos );
+//usuariosRef.get().then( retornaDocumentos );
+
+/*
+    select * from ususarios
+        where activo = true
+*/
+//usuariosRef.where('activo','==', true).get().then( retornaDocumentos );
+
+/*
+    select * from ususarios
+        where salario > 1800
+*/
+//usuariosRef.where('salario','>', 1800)
+//    .get().then( retornaDocumentos );
+
+    /*
+    select * from ususarios
+        where salario > 1800 and salario < 2300 
+        where salario between 1800 and salario < 2300 
+*/
+//usuariosRef.where('salario','>=', 1800)
+//           .where('salario','<=', 2300 )
+//    .get().then( retornaDocumentos );
+  
+    /*
+    select * from ususarios
+        where salario > 1800 
+            And activo == true
+*/
+usuariosRef.where('salario','>=', 1800)
+           .where('activo','==', true)
+                .get().then( retornaDocumentos );
